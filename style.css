@@ -1,0 +1,29 @@
+:root{
+    --where-banana: 0vw; /*Don't change it!*/
+    --indicator-width: 50vw; /*If you change width unit, update --indicator-width-unit*/
+    --indicator-width-unit: vw;
+    --color-primary: #ffa600;
+    --color-secondary: #ffda7b;
+    --color-white: snow;
+}
+
+.lipsum{
+    font-size: 5em;
+}
+
+.indicator{
+    width: var(--indicator-width);
+    min-height: 15vh;
+    background-image: -moz-repeating-linear-gradient(to right, var(--color-secondary), var(--color-secondary) var(--where-banana), var(--color-white) var(--where-banana), var(--color-white) var(--indicator-width)); /*Firefox*/
+    background-image: -o-repeating-linear-gradient(to right, var(--color-secondary), var(--color-secondary) var(--where-banana), var(--color-white) var(--where-banana), var(--color-white) var(--indicator-width)); /*Opera*/
+    background-image: -webkit-repeating-linear-gradient(to right, var(--color-secondary), var(--color-secondary) var(--where-banana), var(--color-white) var(--where-banana), var(--color-white) var(--indicator-width)); /*Safari, Chrome*/
+    background-image: repeating-linear-gradient(to right, var(--color-secondary), var(--color-secondary) var(--where-banana), var(--color-white) var(--where-banana), var(--color-white) var(--indicator-width)); 
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    font-size: 5em;
+    text-align: center;
+    margin: auto;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 5px;
+}
